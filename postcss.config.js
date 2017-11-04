@@ -9,6 +9,8 @@ module.exports = ({ file }) => ({
     'postcss-reporter': {
       clearReportedMessages: true,
       throwError: false
-    }
+    },
+    autoprefixer: {},
+    'postcss-nesting': {}
   }
 });

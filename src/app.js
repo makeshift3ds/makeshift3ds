@@ -1,2 +1,3 @@
 /* Import the css so it is run through css-loader */
-import './assets/css/manifest.css';
+import './assets/css/normalize.css';
+import './assets/css/main.css';
