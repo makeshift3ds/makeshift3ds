@@ -1,4 +1,5 @@
 @import 'vars.css';
+@import 'animations.css';
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* Border Box All The Things */
@@ -159,4 +160,20 @@ body {
   order: 1;
   padding: var(--padding-default);
   color: white;
+
+  & .typed {
+    display: none;
+    margin: 0;
+  }
+
+  & .typed.visible {
+    display: block;
+  }
+
+  & .typed.active {
+    &:after {
+      content: '\258C';
+      animation: cursor-blink 1s linear infinite;
+    }
+  }
 }
