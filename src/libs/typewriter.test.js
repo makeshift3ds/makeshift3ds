@@ -43,6 +43,8 @@ describe('TypeWriter', () => {
 
     test('it types when invoked', () => {
       typer = new TypeWriter('.typed-class');
+      // TODO: update to advanceTimersByTime when jest@21.3.0 is released
+      // https://github.com/facebook/jest/issues/4723
       jest.runTimersToTime(2000);
       typer.startTyping();
       expect(document.querySelector('.typed-class:first-child').innerHTML).toBe(
