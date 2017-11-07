@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/app.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -29,7 +29,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.js$/,
+        test: /\.js?x$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
