@@ -4,11 +4,7 @@ import './assets/css/main.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import TypeWriter from './libs/typewriter.js';
-
-// let typer = new TypeWriter();
-
-// typer.startTyping();
+import TypeWriter from './libs/typewriter.js';
 
 ReactDOM.render(
   <main id="app">
@@ -58,12 +54,16 @@ ReactDOM.render(
           <p className="typed">
             Hello my name is Ken Elliott and I code everything.
           </p>
-          <div id="react-app">asd</div>
         </div>
       </div>
       <div id="footer" />
     </div>
   </main>,
 
-  document.getElementById('root')
+  document.getElementById('root'),
+
+  () => {
+    const typer = new TypeWriter();
+    typer.startTyping();
+  }
 );

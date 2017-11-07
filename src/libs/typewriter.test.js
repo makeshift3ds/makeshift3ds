@@ -1,32 +1,53 @@
 import TypeWriter from './typewriter';
 
-let typer;
+let typer, spy;
+jest.useFakeTimers();
 
 describe('TypeWriter', () => {
-  beforeEach(() => {
-    typer = new TypeWriter('.typed-class', '.container-class');
-    document.body.innerHTML = `
-        <body>
-          <div class="container-class">
-            <p class="typed-class">this gets <b>typed</b></p>
-          </div>
-        </body>
-      `;
-  });
-  describe('given no constructor arguments', () => {
-    test('defaults the typed and container classes', () => {
+  describe('constructor', () => {
+    /**
+     * mock console.warn to avoid polluting test output
+     */
+    beforeEach(() => {
+      spy = jest.spyOn(global.console, 'warn').mockImplementation(() => {});
+    });
+
+    test('given no typedSelector it defaults to typed class', () => {
       typer = new TypeWriter();
       expect(typer.typedSelector).toBe('.typed');
-      expect(typer.containerSelector).toBe('.typed-container');
+    });
+
+    test('given typedSelector it finds the right number of elements', () => {
+      document.body.innerHTML = `<p class="typed-class">typed</p><p class="typed-class">typed</p>`;
+      typer = new TypeWriter('.typed-class');
+      expect(typer.typedElements.length).toEqual(2);
+    });
+
+    test('given no typed elements are found it sends a warning to the console', () => {
+      typer = new TypeWriter();
+      expect(spy).toHaveBeenCalled();
     });
   });
 
   describe('given constructor arguments', () => {
-    test('sets default classes and finds elements', () => {
+    beforeEach(() => {
+      document.body.innerHTML = `<p class="typed-class">typed</p>`;
+    });
+
+    test('it finds the right elements', () => {
+      typer = new TypeWriter('.typed-class');
       expect(typer.typedSelector).toBe('.typed-class');
-      expect(typer.containerSelector).toBe('.container-class');
       expect(typer.getTypedElements().length).toEqual(1);
-      expect(typer.getTypedContainer().classList[0]).toEqual('container-class');
+      expect(typer.currentElement).toBeDefined();
+    });
+
+    test('it types when invoked', () => {
+      typer = new TypeWriter('.typed-class');
+      jest.runTimersToTime(2000);
+      typer.startTyping();
+      expect(document.querySelector('.typed-class:first-child').innerHTML).toBe(
+        'typed'
+      );
     });
   });
 });
