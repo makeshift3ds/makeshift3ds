@@ -49,12 +49,12 @@ body {
   font-weight: bold;
   color: var(--color-links-font);
 
-  & ul {
+  & > ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 
-    & li#header {
+    & > li#header {
       padding: var(--padding-half);
 
       /* hack to enfore alignment */
@@ -67,7 +67,7 @@ body {
       }
     }
 
-    & li.link-header {
+    & > li.link-header {
       background-color: var(--color-link-header-bg);
       padding: 0.1rem var(--padding-half);
 
@@ -107,12 +107,12 @@ body {
     background-color: var(--color-tabs-bg);
     box-shadow: var(--shadow-bottom-only);
 
-    & ul {
+    & > ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
 
-      & li {
+      & > li {
         display: inline-block;
         /* prettier-ignore */
         padding: 
@@ -139,7 +139,7 @@ body {
   }
 }
 
-#editor-container {
+#editor-content {
   display: flex;
   flex-direction: columns;
 }
@@ -151,7 +151,7 @@ body {
   color: var(--color-gutter-font);
   border-right: 1px solid var(--color-gutter-font);
 
-  & p {
+  & > p {
     margin: 0;
   }
 }
@@ -161,16 +161,16 @@ body {
   padding: var(--padding-default);
   color: white;
 
-  & .typed {
+  & > .typed {
     display: none;
     margin: 0;
   }
 
-  & .typed.visible {
+  & > .typed.visible {
     display: block;
   }
 
-  & .typed.active {
+  & > .typed.active {
     &:after {
       content: '\258C';
       animation: cursor-blink 1s linear infinite;

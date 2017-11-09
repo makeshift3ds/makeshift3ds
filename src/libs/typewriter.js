@@ -43,7 +43,7 @@ export default class TypeWriter {
    */
   typer() {
     // if there is no next character
-    if (this.currentCharIndex > this.innerHTML.length - 1) {
+    if (this.currentCharIndex > this.innerHTML.length) {
       // reset the index
       this.currentCharIndex = 0;
 

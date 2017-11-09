@@ -1,12 +1,30 @@
 module.exports = {
-  extends: ['prettier'],
+  extends: ['prettier', 'prettier/react'],
   env: {
     browser: true,
-    es6: true,
-    node: true
+    es6: true
+  },
+  parserOptions: {
+    ecmaVersion: 2017,
+    ecmaFeatures: {
+      experimentalObjectRestSpread: true,
+      experimentalDecorators: true,
+      jsx: true
+    },
+    sourceType: 'module'
+  },
+  settings: {
+    ecmaScript: 6,
+    jsx: true
   },
   rules: {
-    'prettier/prettier': 'error'
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true
+      }
+    ],
+    quotes: ['error', 'single']
   },
-  plugins: ['prettier']
+  plugins: ['prettier', 'react']
 };

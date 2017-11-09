@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -17,16 +17,16 @@ module.exports = {
           { loader: 'style-loader', options: { sourceMap: true } },
           {
             loader: 'css-loader',
-            options: { importLoaders: 1, sourceMap: true }
+            options: { importLoaders: 1, sourceMap: true },
           },
           {
             loader: 'postcss-loader',
             options: {
               config: { path: 'postcss.config.js' },
-              sourceMap: true
-            }
-          }
-        ]
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.js?x$/,
@@ -34,16 +34,16 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env']
-          }
-        }
-      }
-    ]
+            presets: ['env'],
+          },
+        },
+      },
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
-  ]
+      template: './src/index.html',
+    }),
+  ],
 };

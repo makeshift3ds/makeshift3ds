@@ -18,7 +18,8 @@ describe('TypeWriter', () => {
     });
 
     test('given typedSelector it finds the right number of elements', () => {
-      document.body.innerHTML = `<p class="typed-class">typed</p><p class="typed-class">typed</p>`;
+      document.body.innerHTML =
+        '<p class="typed-class">typed</p><p class="typed-class">typed</p>';
       typer = new TypeWriter('.typed-class');
       expect(typer.typedElements.length).toEqual(2);
     });
@@ -31,7 +32,7 @@ describe('TypeWriter', () => {
 
   describe('given constructor arguments', () => {
     beforeEach(() => {
-      document.body.innerHTML = `<p class="typed-class">typed</p>`;
+      document.body.innerHTML = '<p class="typed-class">typed</p>';
     });
 
     test('it finds the right elements', () => {
