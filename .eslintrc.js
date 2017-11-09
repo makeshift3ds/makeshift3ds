@@ -26,5 +26,5 @@ module.exports = {
     ],
     quotes: ['error', 'single']
   },
-  plugins: ['prettier', 'react']
+  plugins: ['react', 'prettier']
 };
