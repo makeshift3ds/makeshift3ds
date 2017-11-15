@@ -9,6 +9,9 @@
     "start": "webpack-dashboard -- webpack-dev-server --config webpack.dev.js",
     "test": "jest --watch"
   },
+  "jest": {
+    "setupFiles": ["./config/jest/shims.js", "./config/jest/setup.js"]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,6 +23,8 @@
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
     "eslint": "^4.10.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.7.0",
