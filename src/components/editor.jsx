@@ -1,8 +1,7 @@
 import React from 'react';
-
 import TypeWriter from '../libs/typewriter';
 
-export default class Editor extends React.Component {
+export default class Editor extends React.PureComponent {
   render() {
     return (
       <div id="editor">
@@ -17,7 +16,7 @@ export default class Editor extends React.Component {
           </div>
           <div id="code-window">
             <p className="typed">
-              Hello my name is Ken Elliott and I type codes
+              Hello my name is Ken Elliott and I am a Front End Engineer.
             </p>
           </div>
         </div>
