@@ -1,12 +1,5 @@
 import React from 'react';
-import Nav from './nav.jsx';
-import Editor from './editor.jsx';
 
-const App = () => (
-  <main id="app">
-    <Nav />
-    <Editor />
-  </main>
-);
+const App = () => <main id="app">Hello</main>;
 
 export default App;
