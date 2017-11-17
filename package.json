@@ -6,11 +6,15 @@
   "scripts": {
     "dev": "webpack --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "start": "webpack-dashboard -- webpack-dev-server --config webpack.dev.js",
+    "start":
+      "webpack-dashboard -- webpack-dev-server --config webpack.dev.js --port 8000",
     "test": "jest --watch"
   },
   "jest": {
-    "setupFiles": ["./config/jest/shims.js", "./config/jest/setup.js"]
+    "setupFiles": ["./config/jest/shims.js", "./config/jest/setup.js"],
+    "moduleNameMapper": {
+      "^.+\\.(css|less)$": "<rootDir>/__mocks__/css_mock.js"
+    }
   },
   "keywords": [],
   "author": "",
