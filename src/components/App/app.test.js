@@ -22,4 +22,9 @@ describe('<App />', () => {
     const wrapper = render(<App />);
     expect(wrapper.find('header')).toHaveLength(1);
   });
+
+  it('should match snapshot', () => {
+    const component = shallow(<App />);
+    expect(component).toMatchSnapshot();
+  });
 });

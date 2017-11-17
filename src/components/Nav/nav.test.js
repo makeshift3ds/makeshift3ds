@@ -17,4 +17,9 @@ describe('<Nav />', () => {
     const component = shallow(<Nav />);
     expect(component.find('.social-link')).toHaveLength(5);
   });
+
+  it('should match snapshot', () => {
+    const component = shallow(<Nav />);
+    expect(component).toMatchSnapshot();
+  });
 });
