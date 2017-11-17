@@ -1,0 +1,52 @@
+@import '../../assets/css/vars.css';
+
+header {
+  background-image: url('http://res.cloudinary.com/makeshift3ds/image/upload/header-background_scn7px.jpg');
+  background-position: center bottom;
+  border-bottom: 1px solid #2e3b3f;
+  height: 385px;
+
+  & #header-content-container {
+    display: flex;
+    height: 90%;
+
+    @media (max-width: 630px) {
+      display: block;
+    }
+  }
+
+  & #header-avatar {
+    display: flex;
+    padding: 1rem;
+
+    @media (max-width: 630px) {
+      display: block;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    & img {
+      border-radius: 50%;
+      border: 2px solid #2e3b3f;
+      filter: sepia(0.5);
+      box-shadow: var(--shadow-level1);
+      align-self: flex-end;
+    }
+  }
+
+  & .header-content {
+    flex-grow: 1;
+    text-align: right;
+    padding: 1rem;
+    font-size: 2rem;
+    color: #dac7b9;
+    align-self: flex-end;
+    transform: translateY(-2rem);
+
+    @media (max-width: 630px) {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+  }
+}
