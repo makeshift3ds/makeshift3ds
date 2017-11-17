@@ -23,7 +23,7 @@ a {
 }
 
 body {
-  background-color: var(--color-secondary-int1);
+  background-color: var(--color-secondary-int1, #ccc);
 }
 
 #app {
