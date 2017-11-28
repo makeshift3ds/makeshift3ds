@@ -7,7 +7,7 @@ import BabelPolyfill from 'babel-polyfill';
 
 export default class Home extends React.Component {
   state = {
-    posts: []
+    posts: [],
   };
 
   setStateAsync(state) {
@@ -21,7 +21,7 @@ export default class Home extends React.Component {
       const res = await fetch('http://jsonplaceholder.typicode.com/posts');
       const posts = await res.json();
       this.setState({
-        posts
+        posts,
       });
       console.log(posts);
     } catch (e) {
@@ -33,6 +33,8 @@ export default class Home extends React.Component {
     return (
       <section className="home">
         <SectionBlock />
+
+        {this.state.posts.length}
       </section>
     );
   }
