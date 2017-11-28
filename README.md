@@ -1,5 +1,5 @@
-### Starter Webpack 3 Application
-Barebones Webpack 3 application using Sass and Babel. 
+### Makeshift3ds.com website
+This is my homepage. There are many like it, but this one is mine. 
 
 ### Usage
 **do a dev build**
