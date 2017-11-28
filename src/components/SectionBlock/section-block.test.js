@@ -8,7 +8,7 @@ describe('<SectionBlock />', () => {
     expect(component).toHaveLength(1);
   });
 
-  it('should render 1 h2 block element', () => {
+  it('should render 1 h1 block element', () => {
     const component = shallow(<SectionBlock />);
     expect(component.find('h1')).toHaveLength(1);
   });
