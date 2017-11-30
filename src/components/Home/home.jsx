@@ -20,10 +20,9 @@ export default class Home extends React.Component {
     try {
       const res = await fetch('http://jsonplaceholder.typicode.com/posts');
       const posts = await res.json();
-      this.setState({
+      this.setStateAsync({
         posts,
       });
-      console.log(posts);
     } catch (e) {
       console.log('error');
     }

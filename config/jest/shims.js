@@ -5,3 +5,18 @@
 global.requestAnimationFrame = callback => {
   setTimeout(callback, 0);
 };
+
+/**
+ * Mock fetch for jest tests
+ */
+global.fetch = jest.fn().mockImplementation(() => {
+  var p = new Promise(resolve => {
+    resolve({
+      json() {
+        return {};
+      },
+    });
+  });
+
+  return p;
+});
