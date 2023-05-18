@@ -1,3 +1,3 @@
-# TESTING
+# TESTING Profile trophies
 
-hello world!
+[![trophy](https://github-profile-trophy.vercel.app/?username=makeshift3ds)](https://github.com/makeshift3ds/github-profile-trophy)
