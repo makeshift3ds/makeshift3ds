@@ -5,8 +5,7 @@ Hi there, I'm Ken Elliott! 👋
 I'm a passionate software engineer with a strong focus on JavaScript. I enjoy tackling complex problems, building innovative solutions, and collaborating with others to create impactful projects. With over 20 years of experience in full stack development, I bring a diverse skill set and a drive for continuous learning.
 
 
-🔭 What I'm Currently Working On
-
+### 🔭 What I'm Currently Working On
 [https://github.com/makeshift3ds/ite-infrastructure]: Docker/Cloudformation environment for my resume.
 
 
