@@ -27,7 +27,6 @@ I'm a passionate software engineer with a strong focus on JavaScript. I enjoy ta
 📫 How to Reach Me
 
 LinkedIn: [https://www.linkedin.com/in/kenelliottmc/]
-
 Email: [kenelliottmc@gmail.com]
 
 
